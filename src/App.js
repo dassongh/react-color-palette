@@ -1,5 +1,12 @@
-function App() {
-  return <div className="App"></div>;
-}
+import { generatePalette } from './service/colorHelpers';
+// components
+import Pallete from './components/Pallete';
+import seedColors from './service/seedColors';
 
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Pallete palette={generatePalette(seedColors[4])} />
+    </div>
+  );
+}
