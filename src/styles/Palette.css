@@ -1,8 +1,9 @@
-.Pallete {
+.Palette {
   height: 100vh;
   overflow: hidden;
 }
 
-.Pallete-colors {
+.Palette-colors {
   height: 90%;
 }
+
