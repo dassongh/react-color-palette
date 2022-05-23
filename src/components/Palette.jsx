@@ -13,12 +13,16 @@ export default function Palette({ palette }) {
     setFormat(value);
   };
 
-  const colorBoxes = palette.colors[level].map(color => <ColorBox background={color[format]} name={color.name} />);
+  const colorBoxes = palette.colors[level].map(color => <ColorBox background={color[format]} name={color.name} key={color.id} />);
 
   return (
     <div className="Palette">
       <Navbar level={level} changeLevel={setLevel} handleChange={changeFormat} />
       <div className="Palette-colors">{colorBoxes}</div>
+      <footer className="Palette-footer">
+        {palette.paletteName}
+        <span className="emoji">{palette.emoji}</span>
+      </footer>
     </div>
   );
 }
